@@ -1,0 +1,19 @@
+{
+  "name": "commerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+      "cypress:run": "cypress run",
+      "cypress:report": "npm run cypress:run && npx mochawesome-merge cypress/reports/mochawesome/*.json > merged-report.json && npx marge merged-report.json --reportDir cypress/reports/mochawesome --reportFilename report",
+      "cypress:open" : "cypress open"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.3.2",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
+  }
+}
